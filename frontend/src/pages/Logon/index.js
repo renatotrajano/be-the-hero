@@ -4,7 +4,7 @@ import { FiLogIn} from 'react-icons/fi'
 
 import api from '../../services/api'
 
-import './styles.css'
+import {LogonContainer, SectionForm, Title, Button, Input} from '../styles';
 import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png'
 
@@ -27,25 +27,24 @@ export default function Logon(){
     }
 
     return (
-        <div className="logon-container">
-            <section className="form">
+        <LogonContainer>
+            <SectionForm>
                 <img src={logoImg} alt="Be The Hero"/>
 
                 <form onSubmit={handleLogon}>
-                    <h1>Faça seu logon</h1>
-                    <input 
+                    <Title>Faça seu logon</Title>
+                    <Input
                         placeholder="Sua ID"
                         value={id}
-                        onChange={e => setId(e.target.value)}
-                    />
-                    <button className="button" type="submit">Entrar</button>
+                        onChange={e => setId(e.target.value)}>
+                    </Input>
+                    <Button type="submit"> Entrar </Button>
                     <Link className="back-link" to="/register"><FiLogIn size={16} color="E02041"/>Não tenho cadastro</Link>
                 </form>
 
-            </section>
+            </SectionForm>
             
             <img src={heroesImg} alt="Heroes"/>
-
-        </div>
+        </LogonContainer>
     );
 }
