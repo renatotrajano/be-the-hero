@@ -4,7 +4,8 @@ import { FiLogIn} from 'react-icons/fi'
 
 import api from '../../services/api'
 
-import {LogonContainer, SectionForm, Title, Button, Input} from '../styles';
+import {Input, Button} from '../globalStyles';
+import {LogonContainer, SectionForm, Title} from './styles';
 import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png'
 
