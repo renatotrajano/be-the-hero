@@ -4,7 +4,7 @@ import {Link, useHistory} from 'react-router-dom';
 import api from '../../services/api';
 
 import {FiPower, FiTrash2} from 'react-icons/fi';
-import './styles.css';
+import {ProfileContainer} from './styles';
 
 export default function Profile(){
 
@@ -44,7 +44,7 @@ export default function Profile(){
     }
 
     return(
-        <div className="profile-container">
+        <ProfileContainer>
             <header>
                 <img src={logoImg} alt="Be The hero"/>
                 <span>Bem vinda, {ongName}</span>
@@ -69,12 +69,12 @@ export default function Profile(){
                         <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency:'BRL'}).format(incident.value)}</p>
 
                         <button onClick={() => handleDeleteIncident(incident.id)} type="button">
-                            <FiTrash2 size={20} color="#a8a8b3" />
+                            <FiTrash2 size={20} color="#FFF"/>
                         </button>
                     </li> 
                 ))}
             </ul>
 
-        </div>
+        </ProfileContainer>
     );
 }
