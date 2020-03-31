@@ -4,7 +4,7 @@ import logoImg from '../../assets/logo.svg';
 import {FiArrowLeft} from 'react-icons/fi';
 
 import api from '../../services/api';
-import './styles.css';
+import {NewIncidentContainer} from './styles';
 
 export default function NewIncident(){
     
@@ -36,7 +36,7 @@ export default function NewIncident(){
     }
 
     return (
-        <div className="new-incident-container">
+        <NewIncidentContainer>
 
             <div className="content">
                 <section>
@@ -69,6 +69,6 @@ export default function NewIncident(){
                 </form>
             </div>
 
-        </div>
+        </NewIncidentContainer>
     );
 }
